@@ -53,7 +53,12 @@ C++ 保证出现在derived class中的base class subobjec有其完整的原样�
 > char + padding + char(两个char不同类)
 > 不然不同层赋值有问题
 
-:wq
+### virtual inheritance
+		x
+	y		z
+		k
 
-
+布局
+	y + z + k + x
+在y,z中有指向x的指针或offset
 
