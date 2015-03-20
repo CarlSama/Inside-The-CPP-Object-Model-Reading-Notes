@@ -49,4 +49,5 @@ ptr->normalize();								normalize_7Point3dSFv();
 
 3.	不需要经class object调用
 
+		
 
