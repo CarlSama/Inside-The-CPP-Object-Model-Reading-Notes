@@ -54,8 +54,27 @@ Point3d* Point3d::Point3d(									Point3d* Point3d::Point3d(
 }															}
 ```
 
+###	the_semantics-of-the-vptr
 
+####	构造函数的执行顺序
 
+1.	在derived class constructor中,所有virtual base classes以及上一层base class的constructors会被调用
+
+2.	对象的vptr(s)被初始化,指向相关的virtual table(s)
+
+3.	如果有member inttialization list的话,在constructor体内展开.这要在setting vptr之后,以免有virtual member function被调用
+
+4.	执行user code
+
+### object copy semantics
+
+####	refuse copy
+
+1.	= delete
+
+2.	private + no defination
+
+####	 	
 
 
 
